@@ -1,0 +1,18 @@
+[
+  {
+    "nick": "_OPILOG12_",
+    "image": "images/players/opilog.png",
+    "description": {
+      "pl": "Hejkaaa! Jestem Opilog, jestem lisem oraz właścicielem serwera :3",
+      "en": "Hiii! I'm Opilog, I'm a fox and server owner :3"
+    }
+  },
+  {
+    "nick": "sweetpotatokal",
+    "image": "images/players/potat.png",
+    "description": {
+      "pl": "Oczekiwanie na opis",
+      "en": "Waiting for description"
+    }
+  }
+]

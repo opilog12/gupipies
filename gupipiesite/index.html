@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#160707">
+  <title data-i18n="homeTitle">Gupi Pies Site</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/icon/ikona.png">
+  <script src="js/translations.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="logo" href="index.html">GUPI<span>PIES</span></a>
+    <nav>
+      <a class="active" href="index.html" data-i18n="navHome">Główna</a>
+      <a href="players.html" data-i18n="navPlayers">Gracze</a>
+      <a href="news.html" data-i18n="navNews">Aktualności</a>
+    </nav>
+    <div class="language-switch">
+      <button type="button" data-lang="pl">PL</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow" data-i18n="homeEyebrow">WIELBIJMY GUPIEGO PSA</p>
+      <h1 data-i18n="homeHeading">To nie jest zwykły serwer.</h1>
+      <p class="hero-text" data-i18n="homeText">
+        Poznaj społeczność, odkrywaj świat i twórz własną historię.
+      </p>
+      <div class="hero-actions">
+        <button class="button button-primary" id="copy-ip" type="button" data-copy-ip
+        data-i18n="copyIp">Kopiuj IP serwera</button>
+        <a class="button button-secondary" href="players.html"
+          data-i18n="meetPlayers">Poznaj graczy</a>
+      </div>
+      <p class="server-ip">
+        <span data-i18n="serverAddress">Adres serwera:</span>
+        <strong id="server-address">gupipies.icsv.pl</strong>
+      </p>
+      <p class="copy-status" id="copy-status" aria-live="polite"></p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="latestEyebrow">CO NOWEGO?</p>
+        <h2 data-i18n="latestNews">Najnowsze aktualności</h2>
+      </div>
+      <div class="news-grid" id="home-news"></div>
+      <div class="center">
+        <a class="button button-secondary" href="news.html"
+          data-i18n="allNews">Wszystkie aktualności</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Opilog12</span>
+    <span data-i18n="footerText">Stworzone dla naszej społeczności.</span>
+  </footer>
+</body>
+</html>
