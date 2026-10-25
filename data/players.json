@@ -14,5 +14,13 @@
       "pl": "Oczekiwanie na opis",
       "en": "Waiting for description"
     }
+    },
+  {
+    "nick": "The_KuroX",
+    "image": "images/players/kurox.png",
+    "description": {
+      "pl": "Oczekiwanie na opis",
+      "en": "Waiting for description"
+    }
   }
 ]
