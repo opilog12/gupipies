@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07111d">
-  <title data-i18n="playersTitle">Gracze - Gupi Pies Site</title>
+  <meta name="theme-color" content="#160707">
+  <title data-i18n="homeTitle">Gupi Pies Site</title>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="stylesheet" href="css/halloween.css">
-  <script src="js/translations.js" defer></script>
+   <link rel="stylesheet" href="css/halloween.css">
   <link rel="icon" href="images/icon/ikona.png">
+  <script src="js/translations.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
-<body class="players-page">
+<body class="home-page">
   <header class="site-header">
     <a class="logo" href="index.html">GUPI<span>PIES</span></a>
     <nav>
-      <a href="index.html" data-i18n="navHome">Główna</a>
-      <a class="active" href="players.html" data-i18n="navPlayers">Gracze</a>
+      <a class="active" href="index.html" data-i18n="navHome">Główna</a>
+      <a href="players.html" data-i18n="navPlayers">Gracze</a>
       <a href="news.html" data-i18n="navNews">Aktualności</a>
     </nav>
     <div class="language-switch">
@@ -26,31 +26,38 @@
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-intro">
-      <p class="eyebrow" data-i18n="playersEyebrow">NASZA EKIPA</p>
-      <h1 data-i18n="playersHeading">Poznaj graczy</h1>
-      <p data-i18n="playersText">Kliknij gracza, aby poznać go bliżej.</p>
+  <main>
+    <section class="hero">
+      <p class="eyebrow" data-i18n="homeEyebrow">WIELBIJMY GUPIEGO PSA</p>
+      <h1 data-i18n="homeHeading">To nie jest zwykły serwer.</h1>
+      <p class="hero-text" data-i18n="homeText">
+        Poznaj społeczność, odkrywaj świat i twórz własną historię.
+      </p>
+      <div class="hero-actions">
+        <button class="button button-primary" id="copy-ip" type="button" data-copy-ip
+        data-i18n="copyIp">Kopiuj IP serwera</button>
+        <a class="button button-secondary" href="players.html"
+          data-i18n="meetPlayers">Poznaj graczy</a>
+      </div>
+      <p class="server-ip">
+        <span data-i18n="serverAddress">Adres serwera:</span>
+        <strong id="server-address">gupipies.icsv.pl</strong>
+      </p>
+      <p class="copy-status" id="copy-status" aria-live="polite"></p>
     </section>
 
-    <div class="search-wrap">
-      <label class="sr-only" for="player-search" data-i18n="searchLabel">Szukaj gracza</label>
-      <input id="player-search" type="search"
-        data-i18n-placeholder="searchPlaceholder"
-        placeholder="Wpisz nick gracza...">
-    </div>
-
-    <section class="player-grid" id="player-list" aria-label="Players"></section>
-    <p class="empty-state hidden" id="players-empty" data-i18n="noPlayers">
-      Nie znaleziono graczy.
-    </p>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="latestEyebrow">CO NOWEGO?</p>
+        <h2 data-i18n="latestNews">Najnowsze aktualności</h2>
+      </div>
+      <div class="news-grid" id="home-news"></div>
+      <div class="center">
+        <a class="button button-secondary" href="news.html"
+          data-i18n="allNews">Wszystkie aktualności</a>
+      </div>
+    </section>
   </main>
-
-  <dialog id="player-dialog" class="player-dialog">
-    <button type="button" class="dialog-close" id="close-player"
-      aria-label="Close">×</button>
-    <div id="player-profile"></div>
-  </dialog>
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Opilog12</span>
