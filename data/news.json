@@ -3,14 +3,14 @@
     "id": "wiadomosc1",
     "date": "2026-10-25",
     "title": {
-      "pl": "Wiadomości z dnia 25 Października 2026",
-      "en": "News from October 25, 2026"
+      "pl": "test",
+      "en": "test"
     },
     "description": {
-      "pl": "Zapraszam do oglądania i miłego sensu, pierwszy raz w takim formacie",
-      "en": "I invite you to watch and enjoy the screening, it’s the first time in this format"
+      "pl": "test",
+      "en": "test"
     },
-    "videoSubtitles": "https://drive.google.com/file/d/1DL9cp9_DLhfKfHpu_4vV9pugUAiGJByN/preview",
-    "videoNoSubtitles": "https://drive.google.com/file/d/ID_FILMU_BEZ_NAPISOW/preview"
+    "videoSubtitles": "test",
+    "videoNoSubtitles": "test"
   }
 ]
