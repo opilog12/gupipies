@@ -62,5 +62,13 @@
       "pl": "Oczekiwanie na opis",
       "en": "Waiting for description"
     }
+  },
+  {
+    "nick": "ItsNotArcania",
+    "image": "images/players/arcania.png",
+    "description": {
+      "pl": "Oczekiwanie na opis",
+      "en": "Waiting for description"
+    }
   }
 ]
