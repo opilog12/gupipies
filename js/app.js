@@ -346,27 +346,11 @@ function videoMarkup(item) {
 
   let buttons = "";
 
-  if (subtitlesUrl) {
-    buttons += `
-      <button
-        type="button"
-        class="video-option active"
-        data-video-url="${escapeHTML(subtitlesUrl)}"
-      >
-        ${escapeHTML(
-          translate("subtitles")
-        )}
-      </button>
-    `;
-  }
-
   if (noSubtitlesUrl) {
     buttons += `
       <button
         type="button"
-        class="video-option ${
-          subtitlesUrl ? "" : "active"
-        }"
+        class="video-option active"
         data-video-url="${escapeHTML(noSubtitlesUrl)}"
       >
         ${escapeHTML(
@@ -376,8 +360,24 @@ function videoMarkup(item) {
     `;
   }
 
+  if (subtitlesUrl) {
+    buttons += `
+      <button
+        type="button"
+        class="video-option ${
+          noSubtitlesUrl ? "" : "active"
+        }"
+        data-video-url="${escapeHTML(subtitlesUrl)}"
+      >
+        ${escapeHTML(
+          translate("subtitles")
+        )}
+      </button>
+    `;
+  }
+
   const initialUrl =
-    subtitlesUrl || noSubtitlesUrl;
+    noSubtitlesUrl || subtitlesUrl;
 
   return `
     <div class="video-block">
@@ -587,7 +587,7 @@ function setupIPCopy() {
           statusElement.textContent = "";
         } else {
           button.textContent = translate("copyIp");
-          applyTranslations(); // Przywraca tłumaczenie z data-i18n
+          applyTranslations();
         }
       }, 2000);
 
