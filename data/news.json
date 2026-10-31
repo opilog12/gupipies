@@ -1,6 +1,6 @@
 [
   {
-    "id": "wiadomosc1",
+    "id": "wiadomosc2",
     "date": "2026-10-31",
     "title": {
       "pl": "Film z Halloween",
@@ -13,5 +13,17 @@
     "videoNoSubtitles": "https://drive.google.com/file/d/1Bya8JwOmi9tu4POhnbqOqySpfTZTnLhX/preview",
     "videoSubtitles": "https://drive.google.com/file/d/1O0oaWG9C9_Unq5S8aem5umFRPnfPRmh1/preview"
     
+  },
+    {
+    "id": "wiadomosc1",
+    "date": "2026-10-31",
+    "title": {
+      "pl": "Oficjalne otwarcie strony",
+      "en": "Official website launch"
+    },
+    "description": {
+      "pl": "Witajcie, drodzy gracze! Witamy Was na naszej stronie internetowej. Znajdziecie tu informacje o graczach (w zakładce Gracze), a także aktualności dotyczące serwera (w zakładce aktualności). Będziemy również publikować filmy i krótkie nagrania związane z serwerem lub grającymi na nim osobami. Życzymy Wam wspaniałej zabawy! - opilog i sweetpotato",
+      "en": "THello dear players, we would like to welcome you to our website. Here, you will find information about players (in the Players tab) as well as news regarding the server (in the News tab). We will also be posting videos and clips related to the server or its players. Have a great time playing! - opilog and sweetpotato"
+    }
   }
 ]
