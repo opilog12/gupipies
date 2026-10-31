@@ -1,1 +1,17 @@
-
+[
+  {
+    "id": "wiadomosc1",
+    "date": "2026-10-31",
+    "title": {
+      "pl": "Film z Halloween",
+      "en": "Video from Halloween"
+    },
+    "description": {
+      "pl": "Straszne zjawy pojawiły się w naszej okolicy, jak mieszkańcy pewnej wyspy sobie z nimi poradzą? Jak wpłynie na nich atmosfera grozy? Przekonajcie się w tym filmie",
+      "en": "Terrifying apparitions have appeared in our surroundings, how will the inhabitants of a certain island deal with them? And how will this atmosphere of dread affect them? Find out in this video"
+    },
+    "videoNoSubtitles": "https://drive.google.com/file/d/1Bya8JwOmi9tu4POhnbqOqySpfTZTnLhX/preview",
+    "videoSubtitles": "https://drive.google.com/file/d/1O0oaWG9C9_Unq5S8aem5umFRPnfPRmh1/preview"
+    
+  }
+]
