@@ -103,6 +103,8 @@ function setupLanguageSwitcher() {
 
       applyTranslations();
 
+      window.dispatchEvent(new CustomEvent("siteLanguageChanged", { detail: { language: currentLanguage } }));
+
       renderPlayers();
       renderNews();
       renderHomeNews();

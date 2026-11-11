@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#160707">
+  <title data-i18n="gamesTitle">Gry - Gupi Pies Site</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/halloween.css"> -->
+  <link rel="icon" href="images/icon/ikona.png">
+  <script src="js/translations.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/games.js" defer></script>
+</head>
+<body class="games-page">
+  <header class="site-header">
+    <a class="logo" href="index.html">GUPI<span>PIES</span></a>
+    <nav>
+      <a href="index.html" data-i18n="navHome">Główna</a>
+      <a href="players.html" data-i18n="navPlayers">Gracze</a>
+      <a href="news.html" data-i18n="navNews">Aktualności</a>
+      <a class="active" href="games.html" data-i18n="navGames">Gry</a>
+    </nav>
+    <div class="language-switch">
+      <button type="button" data-lang="pl">PL</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main class="page-main games-main">
+    <section class="page-intro">
+      <p class="eyebrow" data-i18n="gamesEyebrow">SPRAWDŹ SWOJĄ WIEDZĘ</p>
+      <h1 data-i18n="gamesHeading">Zgadnij gracza</h1>
+      <p data-i18n="gamesIntro">Rozpoznajesz wszystkie skiny naszej ekipy? Wybierz tryb i zagraj!</p>
+    </section>
+
+    <section class="game-picker" id="game-picker" aria-label="Game modes">
+      <button class="game-choice" type="button" data-game="guess">
+        <span class="game-choice-icon">🎭</span>
+        <span class="game-choice-title" data-i18n="guessGameTitle">Kto to jest?</span>
+        <span class="game-choice-description" data-i18n="guessGameDesc">Zobacz skin i wpisz nick gracza.</span>
+      </button>
+      <button class="game-choice" type="button" data-game="grid">
+        <span class="game-choice-icon">🧩</span>
+        <span class="game-choice-title" data-i18n="gridGameTitle">Znajdź gracza</span>
+        <span class="game-choice-description" data-i18n="gridGameDesc">Dopasuj nick do jednego z dziewięciu skinów.</span>
+      </button>
+    </section>
+
+    <section class="game-panel hidden" id="guess-panel">
+      <button class="back-link" type="button" data-back>← <span data-i18n="backToGames">Wróć do wyboru gier</span></button>
+      <p class="eyebrow" data-i18n="guessGameTitle">Kto to jest?</p>
+      <h2 data-i18n="guessPrompt">Do kogo należy ten skin?</h2>
+      <div class="guess-mode-switch" role="group" aria-label="Skin display mode">
+        <button class="button button-secondary active" type="button" data-guess-mode="cropped" data-i18n="croppedSkinMode">Fragment skina</button>
+        <button class="button button-secondary" type="button" data-guess-mode="full" data-i18n="fullSkinMode">Cały skin</button>
+      </div>
+      <div class="single-skin-frame"><img id="guess-skin" src="" alt=""></div>
+      <form id="guess-form" class="guess-form">
+        <label for="guess-input" data-i18n="nicknameLabel">Nick gracza</label>
+        <input id="guess-input" type="text" autocomplete="off" placeholder="Wpisz nick..." data-i18n-placeholder="nicknamePlaceholder">
+        <button class="button button-primary" type="submit" data-i18n="checkAnswer">Sprawdź</button>
+      </form>
+      <p class="game-feedback" id="guess-feedback" aria-live="polite"></p>
+      <div class="game-result hidden" id="guess-result">
+        <p id="guess-result-text"></p>
+        <button class="button button-primary" type="button" data-restart="guess" data-i18n="playAgain">Zagraj ponownie</button>
+      </div>
+      <button class="button button-secondary next-round hidden" id="guess-next" type="button" data-i18n="nextPlayer">Następny gracz</button>
+    </section>
+
+    <section class="game-panel hidden" id="grid-panel">
+      <button class="back-link" type="button" data-back>← <span data-i18n="backToGames">Wróć do wyboru gier</span></button>
+      <div class="grid-game-heading">
+        <div>
+          <p class="eyebrow" data-i18n="gridGameTitle">Znajdź gracza</p>
+          <h2 data-i18n="findNickname">Znajdź skin gracza:</h2>
+          <p class="target-nick" id="target-nick">—</p>
+        </div>
+        <div class="lives" aria-live="polite">
+          <span data-i18n="lives">Życia</span>
+          <strong id="lives-count">♥ ♥ ♥</strong>
+        </div>
+      </div>
+      <div class="skin-grid" id="skin-grid"></div>
+      <p class="game-feedback" id="grid-feedback" aria-live="polite"></p>
+      <div class="game-result hidden" id="grid-result">
+        <p id="grid-result-text"></p>
+        <button class="button button-primary" type="button" data-restart="grid" data-i18n="playAgain">Zagraj ponownie</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Opilog12</span>
+    <span data-i18n="footerText">Stworzone dla naszej społeczności.</span>
+  </footer>
+</body>
+</html>
