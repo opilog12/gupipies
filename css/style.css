@@ -785,3 +785,26 @@ body.super-page {
   border-radius: 16px;
   box-shadow: 0 16px 45px rgba(0,0,0,.35);
 }
+.first-solver-card {
+  width: min(620px, 100%);
+  margin: 28px auto;
+  padding: 22px;
+  border: 1px solid rgba(152, 120, 232, 0.38);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.18), rgba(117, 59, 216, 0.12));
+  box-shadow: 0 0 28px rgba(35, 134, 83, .1);
+}
+
+.first-solver-label {
+  margin: 0 0 8px;
+  color: white;
+  font-weight: 800;
+}
+
+.first-solver-nickname {
+  display: inline-block;
+  color: #a48de2;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
