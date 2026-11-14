@@ -91,7 +91,8 @@ const translations = {
     secretPasswordSubmit: "Odblokuj",
     secretPasswordWrong: "Nieprawidłowe hasło. Spróbuj ponownie.",
     superPageTitle: "Sekretna strona",
-    superPageMessage: "Gratulacje znalezienia sekretnej strony, życzę miłej gry :3"
+    superPageMessage: "Gratulacje znalezienia sekretnej strony, życzę miłej gry :3",
+    firstSolverLabel: "Pierwsza osoba, która rozwiązała zagadkę:"
   },
 
   en: {
@@ -186,6 +187,7 @@ const translations = {
     secretPasswordSubmit: "Unlock",
     secretPasswordWrong: "Incorrect password. Please try again.",
     superPageTitle: "Secret page",
-    superPageMessage: "Congratulations on finding the secret page. Have a nice game :3"
+    superPageMessage: "Congratulations on finding the secret page. Have a nice game :3",
+    firstSolverLabel: "The first person to solve the riddle:"
   }
 };
