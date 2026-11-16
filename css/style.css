@@ -822,3 +822,18 @@ body.super-page {
   height: auto;
   object-fit: cover;
 }
+
+.home-page #home-news .news-image--compact {
+  height: 300px !important;
+  max-height: 300px !important;
+  margin: 10px 0 !important;
+  overflow: hidden !important;
+}
+
+.home-page #home-news .news-image--compact img {
+  display: block !important;
+  width: 100% !important;
+  height: 300px !important;
+  max-height: 300px !important;
+  object-fit: cover !important;
+}
