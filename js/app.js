@@ -1,3 +1,4 @@
+
 const SERVER_IP = "gupipies.icsv.pl";
 
 let currentLanguage = localStorage.getItem("siteLanguage") || "pl";
@@ -334,26 +335,6 @@ function sortedNews() {
 }
 
 
-function imageMarkup(item) {
-  const imageUrl = text(item.image);
-
-  if (!imageUrl) {
-    return "";
-  }
-
-  return `
-    <div class="news-image">
-      <img
-        src="${escapeHTML(imageUrl)}"
-        alt="${escapeHTML(text(item.title))}"
-        loading="lazy"
-        onerror="this.style.display='none'"
-      >
-    </div>
-  `;
-}
-
-
 function videoMarkup(item) {
   const subtitlesUrl =
     item.videoSubtitles?.trim() || "";
@@ -424,6 +405,26 @@ function videoMarkup(item) {
 }
 
 
+function newsImageMarkup(item, compact = false) {
+  const imageUrl = text(item.image).trim();
+
+  if (!imageUrl) {
+    return "";
+  }
+
+  return `
+    <div class="news-image${compact ? " news-image--compact" : ""}">
+      <img
+        src="${escapeHTML(imageUrl)}"
+        alt="${escapeHTML(text(item.title))}"
+        loading="lazy"
+        onerror="this.parentElement.style.display='none'"
+      >
+    </div>
+  `;
+}
+
+
 function renderNews() {
   const container = $("#news-list");
   const emptyState = $("#news-empty");
@@ -464,7 +465,8 @@ function renderNews() {
         )}
       </p>
 
-      ${imageMarkup(item)}
+      ${newsImageMarkup(item)}
+
       ${videoMarkup(item)}
     `;
 
@@ -549,21 +551,7 @@ function renderHomeNews() {
 
     article.className = "news-card";
 
-    const imageUrl = text(item.image);
-    const cardImageMarkup = imageUrl ? `
-      <div class="news-card-image">
-        <img
-          src="${escapeHTML(imageUrl)}"
-          alt="${escapeHTML(text(item.title))}"
-          loading="lazy"
-          onerror="this.style.display='none'"
-        >
-      </div>
-    ` : "";
-
     article.innerHTML = `
-      ${cardImageMarkup}
-
       <div class="news-meta">
         ${escapeHTML(
           formatDate(item.date)
@@ -581,6 +569,8 @@ function renderHomeNews() {
           text(item.description)
         )}
       </p>
+
+      ${newsImageMarkup(item, true)}
 
       <a
         class="text-link"
