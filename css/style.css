@@ -837,3 +837,11 @@ body.super-page {
   max-height: 300px !important;
   object-fit: cover !important;
 }
+@media (max-width: 600px) {
+  .home-page #home-news .news-image--compact,
+  .home-page #home-news .news-image--compact img {
+    height: auto !important;
+    max-height: 220px !important; /* Docięcie maksymalnej wysokości na małych ekranach */
+    aspect-ratio: 16 / 9;         /* Zachowanie estetycznych proporcji */
+  }
+}
