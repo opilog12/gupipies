@@ -262,7 +262,6 @@ function setupPlayerDialog() {
     return;
   }
 
-  // Poprawiono z [data-close-dialog] na #close-player, żeby pasowało do HTML
   const closeButton = dialog.querySelector("#close-player");
 
   if (closeButton) {
@@ -332,6 +331,26 @@ function sortedNews() {
   return [...news].sort((a, b) => {
     return new Date(b.date) - new Date(a.date);
   });
+}
+
+
+function imageMarkup(item) {
+  const imageUrl = text(item.image);
+
+  if (!imageUrl) {
+    return "";
+  }
+
+  return `
+    <div class="news-image">
+      <img
+        src="${escapeHTML(imageUrl)}"
+        alt="${escapeHTML(text(item.title))}"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+    </div>
+  `;
 }
 
 
@@ -445,6 +464,7 @@ function renderNews() {
         )}
       </p>
 
+      ${imageMarkup(item)}
       ${videoMarkup(item)}
     `;
 
@@ -529,7 +549,21 @@ function renderHomeNews() {
 
     article.className = "news-card";
 
+    const imageUrl = text(item.image);
+    const cardImageMarkup = imageUrl ? `
+      <div class="news-card-image">
+        <img
+          src="${escapeHTML(imageUrl)}"
+          alt="${escapeHTML(text(item.title))}"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+      </div>
+    ` : "";
+
     article.innerHTML = `
+      ${cardImageMarkup}
+
       <div class="news-meta">
         ${escapeHTML(
           formatDate(item.date)
