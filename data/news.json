@@ -1,4 +1,20 @@
 [
+    {
+    "id": "wiadomosc3",
+    "date": "2026-11-16",
+    "title": {
+      "pl": "Sekretna strona",
+      "en": "Secret page"
+    },
+    "description": {
+      "pl": "Przez ostatnie dni na naszej stronie trwały poszukiwania sekretnej strony. Z przyjemnością ogłaszamy, że udało się ją odnaleźć! Szczęśliwym zwycięzcą został ItsNotArcania, który w nagrodę otrzymał wyjątkowe wyróżnienie - jego nick został uwieczniony na sekretnej stronie, zdobył specjalną rolę na naszym serwerze Discord, a także otrzymał nagrodę na serwerze Minecraft. Gratulujemy zwycięzcy i dziękujemy wszystkim, którzy wzięli udział w poszukiwaniach! Mamy nadzieję, że była to dla Was świetna zabawa",
+      "en": "Over the past few days, a search for the secret page on our website has been underway. We're excited to announce that it has finally been found! The lucky winner is ItsNotArcania! As a reward, their nickname has been immortalized on the secret page, they have received a special role on our Discord server, and they have also been rewarded on our Minecraft server. Congratulations to the winner, and thank you to everyone who took part in the search! We hope you had fun along the way"
+    },
+    "image": {
+      "pl": "images/news/secret-page-pl.png",
+      "en": "images/news/secret-page-en.png"
+    } 
+  },
   {
     "id": "wiadomosc2",
     "date": "2026-10-31",
